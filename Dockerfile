@@ -56,7 +56,7 @@ COPY --from=builder /tmp/pure-ftpd/*.deb /tmp/pure-ftpd/
 RUN dpkg -i /tmp/pure-ftpd/pure-ftpd-common*.deb &&\
 	dpkg -i /tmp/pure-ftpd/pure-ftpd_*.deb && \
 	# dpkg -i /tmp/pure-ftpd/pure-ftpd-ldap_*.deb && \
-	# dpkg -i /tmp/pure-ftpd/pure-ftpd-mysql_*.deb && \
+	dpkg -i /tmp/pure-ftpd/pure-ftpd-mysql_*.deb && \
 	# dpkg -i /tmp/pure-ftpd/pure-ftpd-postgresql_*.deb && \
 	rm -Rf /tmp/pure-ftpd 
 
